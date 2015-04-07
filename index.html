@@ -30,63 +30,37 @@
 
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
+
+      <iframe class="demo" src="demo.html" scrolling="no"></iframe>
+
       <section id="main_content" class="inner">
         <p>FontAnim is part of a collection of JQuery plugins that animate text in various ways.</p>
 
-<p>There are 4 different plugins:</p>
+        <p>I created these plugins to:</p>
 
-<ul>
-<li><a href="http://github.com/eldub10/randomanim/">Random letter styles</a></li>
-<li><a href="http://github.com/eldub10/fontanim/">Random font families</a></li>
-<li>Word zoom (TBA)</li>
-<li>Kaleidoscope letters (TBA)</li>
-</ul>
+        <ul>
+        <li>brush up on my JavaScript and CSS skills</li>
+        <li>improve my JQuery</li>
+        <li>learn new HTML5 and CSS3 technologies</li>
+        <li>learn more about the Google Font API</li>
+        <li>learn more about GitHub</li>
+        </ul>
 
-<p>FontAnim randomly displays each letter of the selected element's text using a different font face. It requires an array of font-family names passed to the plugin. The plugin uses <a href="https://github.com/typekit/webfontloader">Web Font Loader</a> which is able to load fonts from <a href="http://www.google.com/fonts">Google Fonts</a>,  <a href="http://www.typekit.com/">Typekit</a>, <a href="http://www.fonts.com/">Fonts.com</a>, and <a href="http://fontdeck.com/">Fontdeck</a>, as well as self-hosted web fonts.</p>
+        <p>There are 4 different plugins:</p>
 
-<p>See a demo and find out more information about this work-in-progress:</p>
+        <ul>
+        <li><a href="http://github.com/eldub10/randomanim/">Random letter styles</a></li>
+        <li><a href="http://github.com/eldub10/fontanim/">Random font families</a></li>
+        <li>Word zoom (TBA)</li>
+        <li>Kaleidoscope letters (TBA)</li>
+        </ul>
 
-<p><a href="http://github.com/eldub10/fontanim">http://github.com/eldub10/fontanim</a></p>
+        <p>FontAnim randomly displays each letter of the selected element's text using a different font face. It requires an array of font-family names passed to the plugin. The plugin uses <a href="https://github.com/typekit/webfontloader">Web Font Loader</a> which is able to load fonts from <a href="http://www.google.com/fonts">Google Fonts</a>,  <a href="http://www.typekit.com/">Typekit</a>, <a href="http://www.fonts.com/">Fonts.com</a>, and <a href="http://fontdeck.com/">Fontdeck</a>, as well as self-hosted web fonts.</p>
 
-<h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+        <p>These plugins are based on Director animations I made more than 20 years ago. I used these animations to get my first job as a multimedia developer in 1994 :) Here's an animated gif of one of them:</p>
 
-<p>Include <code>jquery.fontanim.js</code> after JQuery.
-FontAnim also requires <a href="https://github.com/typekit/webfontloader"><code>webfontloader.js</code></a></p>
+        <img src="images/aov2.gif" class="animgif">
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>webfontloader.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.fontanim.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
-
-<p>Create an HTML element that contains text. A div element works best:</p>
-
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>animation<span class="pl-pds">"</span></span>&gt;Animated Fonts&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
-
-<p>Call <code>fontAnim</code> on the element:</p>
-
-<div class="highlight highlight-js"><pre>$(<span class="pl-k">function</span> () {
-    $(<span class="pl-s"><span class="pl-pds">"</span>.animation<span class="pl-pds">"</span></span>).fontAnim({
-        fontlist<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>Roboto<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Oswald<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Lato<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Slabo<span class="pl-pds">'</span></span>]
-    });
-})</pre></div>
-
-<h2>
-<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
-
-<div class="highlight highlight-js"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>.animation<span class="pl-pds">"</span></span>).fontAnim({
-
-    <span class="pl-c">// duration the animation will last</span>
-    duration<span class="pl-k">:</span> <span class="pl-c1">10000</span>,
-
-    <span class="pl-c">// update interval for each 'frame' of animation</span>
-    interval<span class="pl-k">:</span> <span class="pl-c1">300</span>,
-
-    <span class="pl-c">// array of font-family names from Goggle Fonts</span>
-    fontlist<span class="pl-k">:</span> [],
-
-    <span class="pl-c">// function that will be called when animation is complete</span>
-    <span class="pl-en">complete</span>: <span class="pl-k">function</span>() { }
-});</pre></div>
       </section>
     </div>
 
@@ -98,7 +72,7 @@ FontAnim also requires <a href="https://github.com/typekit/webfontloader"><code>
       </footer>
     </div>
 
-    
+
 
   </body>
 </html>
