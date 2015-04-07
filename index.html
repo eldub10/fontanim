@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="FontAnim : JQuery plugin for random animation of fonts">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>FontAnim</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/eldub10/fontanim">View on GitHub</a>
+
+          <h1 id="project_title">FontAnim</h1>
+          <h2 id="project_tagline">JQuery plugin for random animation of fonts</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/eldub10/fontanim/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/eldub10/fontanim/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>FontAnim is part of a collection of JQuery plugins that animate text in various ways.</p>
+
+<p>There are 4 different plugins:</p>
+
+<ul>
+<li><a href="http://github.com/eldub10/randomanim/">Random letter styles</a></li>
+<li><a href="http://github.com/eldub10/fontanim/">Random font families</a></li>
+<li>Word zoom (TBA)</li>
+<li>Kaleidoscope letters (TBA)</li>
+</ul>
+
+<p>FontAnim randomly displays each letter of the selected element's text using a different font face. It requires an array of font-family names passed to the plugin. The plugin uses <a href="https://github.com/typekit/webfontloader">Web Font Loader</a> which is able to load fonts from <a href="http://www.google.com/fonts">Google Fonts</a>,  <a href="http://www.typekit.com/">Typekit</a>, <a href="http://www.fonts.com/">Fonts.com</a>, and <a href="http://fontdeck.com/">Fontdeck</a>, as well as self-hosted web fonts.</p>
+
+<p>See a demo and find out more information about this work-in-progress:</p>
+
+<p><a href="http://github.com/eldub10/fontanim">http://github.com/eldub10/fontanim</a></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Include <code>jquery.fontanim.js</code> after JQuery.
+FontAnim also requires <a href="https://github.com/typekit/webfontloader"><code>webfontloader.js</code></a></p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>webfontloader.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jquery.fontanim.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Create an HTML element that contains text. A div element works best:</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>animation<span class="pl-pds">"</span></span>&gt;Animated Fonts&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<p>Call <code>fontAnim</code> on the element:</p>
+
+<div class="highlight highlight-js"><pre>$(<span class="pl-k">function</span> () {
+    $(<span class="pl-s"><span class="pl-pds">"</span>.animation<span class="pl-pds">"</span></span>).fontAnim({
+        fontlist<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>Roboto<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Oswald<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Lato<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>Slabo<span class="pl-pds">'</span></span>]
+    });
+})</pre></div>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<div class="highlight highlight-js"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>.animation<span class="pl-pds">"</span></span>).fontAnim({
+
+    <span class="pl-c">// duration the animation will last</span>
+    duration<span class="pl-k">:</span> <span class="pl-c1">10000</span>,
+
+    <span class="pl-c">// update interval for each 'frame' of animation</span>
+    interval<span class="pl-k">:</span> <span class="pl-c1">300</span>,
+
+    <span class="pl-c">// array of font-family names from Goggle Fonts</span>
+    fontlist<span class="pl-k">:</span> [],
+
+    <span class="pl-c">// function that will be called when animation is complete</span>
+    <span class="pl-en">complete</span>: <span class="pl-k">function</span>() { }
+});</pre></div>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">FontAnim maintained by <a href="https://github.com/eldub10">eldub10</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
