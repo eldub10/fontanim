@@ -12,7 +12,7 @@ FontAnim randomly displays each letter of the selected element's text using a di
 
 See a demo and find out more information about this work-in-progress:
 
-http://github.com/eldub10/fontanim
+http://eldub10.github.io/fontanim
 
 ##Usage
 
