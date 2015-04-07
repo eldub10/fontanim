@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Font Animation</title>
+
+		<style>
+			.container {
+				background: #ffc;
+				color: #ccf;
+				width: 640px;
+				height: 300px;
+				font: 200px fantasy;
+				text-align: center;
+				padding-top: 20px;
+				position: relative;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">AOV</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+		<script src="jquery.fontanim.js"></script>
+		<script>
+
+			$(".container").animateFonts({
+				duration: 9000,
+				interval: 300,
+				fontlist: ['Lobster','Anton','Chewy','Bangers','Coustard','Vidaloka','Lora','Raleway','Kreon','Monoton']
+			});
+
+		</script>
+	</body>
+</html>
