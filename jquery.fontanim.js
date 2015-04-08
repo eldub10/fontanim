@@ -1,6 +1,6 @@
 
 (function($) {
-    $.fn.animateFonts = function(options, complete) {
+    $.fn.fontAnim = function(options, complete) {
 
     	var settings = $.extend({
     		duration: 10000,
