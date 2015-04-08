@@ -45,6 +45,7 @@
 				width: width,
 				display: 'inline-block',
 				verticalAlign: 'middle',
+				visibility: 'hidden',
 			});
 
 			if(fontlist.length === 0 || typeof WebFont === "undefined") {
@@ -72,6 +73,7 @@
 				$((children).get(index)).css({
 					color: "#" + color,
 					fontFamily: fontlist[font],
+					visibility: 'visible',
 				}).attr("title", fontlist[font]);
 
 				// stop timer when duration countdown ends
