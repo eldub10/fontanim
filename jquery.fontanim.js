@@ -14,6 +14,7 @@
     		var interval = settings.interval;
 			var fontlist = settings.fontlist;
 			var fnComplete = settings.complete;
+			var infinite = duration < 0;
 
 			var textstring = $(this).text();
 
@@ -75,7 +76,7 @@
 
 				// stop timer when duration countdown ends
 				duration -= interval;
-				if(duration < 0) {
+				if(duration < 0 && !infinite) {
 					clearInterval(timer);
 
 					// call completion function
